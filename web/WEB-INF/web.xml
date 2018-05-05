@@ -1,0 +1,27 @@
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring-context.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>mvc-dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<!-- <context-param> <param-name>contextConfigLocation</param-name> <param-value> 
+		/WEB-INF/configs/spring-context.xml </param-value> </context-param> 负责启动Spring容器的监听器，获取Spring文件的配置路径 
+		<listener> <listener-class> org.springframework.web.context.ContextLoaderListener 
+		</listener-class> </listener> -->
+</web-app>
